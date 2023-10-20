@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Mgmt</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <h3 class="display-4 text-center">Student Management</h3>
+          <form id="formQLSV">
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">ID Student: </label>
+                <input type="text" class="form-control" id="txtId" />
+                <span id="spanId" class="text-danger"></span>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Student Name: </label>
+                <input type="text" class="form-control" id="txtName" />
+                <span id="spanName" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">Email: </label>
+                <input type="text" class="form-control" id="txtEmail" />
+                <span id="spanEmail" class="text-danger"></span>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Password: </label>
+                <input type="password" class="form-control" id="txtPass" />
+                <span id="spanPass" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6 form-group">
+                <label for="">Math's Score:</label>
+                <input type="text" class="form-control" id="txtMath" />
+                <span id="spanMath" class="text-danger"></span>
+              </div>
+              <div class="col-6 form-group">
+                <label for="">Literature's Score: </label>
+                <input type="text" class="form-control" id="txtLite" />
+                <span id="spanLite" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="form-group text-center">
+              <button type="button" onclick="addStudent()" class="btn btn-success">
+                Add Student
+              </button>
+
+              <button type="button" onclick="" class="btn btn-dark">
+                Reset
+              </button>
+              <button type="button" onclick="updateStudent()" class="btn btn-info">
+                Update
+              </button>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-9 form-group">
+              <input
+                placeholder="Enter Student Name"
+                type="text"
+                class="form-control"
+                id="txtSearch"
+              />
+            </div>
+            <div class="col-3 form-group">
+              <button id="btnSearch" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 mx-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID Student</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Average Score</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyStudent"></tbody>
+          </table>
+        </div>
+      </div>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+      ></script>
+
+      <!-- validate JS -->
+      <script src="./validate.js"></script>
+
+      <!-- model JS -->
+      <script src="./model.js"></script>
+      
+      <!-- controller JS -->
+      <script src="./controller.js"></script>
+      
+      <!-- Main JS -->
+      <script src="./index.js"></script>
+    </div>
+  </body>
+</html>
