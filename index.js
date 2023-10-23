@@ -29,7 +29,7 @@ function addStudent() {
   if (isValid) {
     // push object student to studentList
     studentList.push(student);
-    console.log(studentList);
+    // console.log(studentList);
 
     // save data to localStorage
     saveLocalStorage();
@@ -52,7 +52,7 @@ function deleteStudent(idStudent) {
     return item.id == idStudent; 
   });
   studentList.splice(position, 1); 
-  console.log("studentList", studentList);
+  // console.log("studentList", studentList);
 
   renderStudentList(studentList);
 

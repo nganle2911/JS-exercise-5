@@ -21,7 +21,7 @@ function checkIdStudent(id, stuList) {
 // TODO: Check length of input
 function checkLength(value, idErr, min, max) {
     var length = value.length; 
-    console.log("length", length);
+    // console.log("length", length);
     if (min <= length && length <= max) {
         // valid
         document.getElementById(idErr).innerText = ""; 
